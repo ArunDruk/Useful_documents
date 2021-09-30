@@ -1,0 +1,23 @@
+//div[contains(text(), 'CAI US iPROC USER')]//preceding-sibling::img[@class='image']
+//div[contains(text(), 'iProcurement Home Page')]
+//div[contains(text(), 'Run')]
+usernameField
+passwordField
+
+id = ICXPOR_NONCATALOG
+id = AddToCart
+
+
+//*[@id="50859:201:-1:0:mainMenuRESTutqMUKNU"]/a/div[1]/img[1]
+
+//select[@id='ItemType']
+//textarea[@id='ItemDescription']
+TST_REQ:29:08:02.
+
+//input[@id='Category']
+IT/ TELECOM.IT SERVICES.COMPUTER HARDWARE MAINTENANCE & SUPPORT.CAI
+ATGSANAN01
+//input[@id='N1:N8:4']
+//button[contains(text(),'Select')]
+
+//*[@id="N1:N8:4"]

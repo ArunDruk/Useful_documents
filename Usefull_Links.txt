@@ -1,0 +1,5 @@
+Links to learn on Robot Framework:
+https://medium.com/edureka/robot-framework-tutorial-f8a75ab23cfd
+
+Link to get the Design pattern in python:
+https://medium.com/edureka/python-pattern-programs-75e1e764a42f
