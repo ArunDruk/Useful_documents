@@ -1,0 +1,123 @@
+1. Brief introduction about yourself
+2. Reason for job change
+
+-> Worked on CYpress.io, Javascript, Agile
+1. List sorting, largest number = [1,7,4,9,6]
+2. Decorators, Generators, lambda 
+3. Different types of Inheritance with examples.
+4. Pytest - Fixtures, scope, autouse, parametrisation
+5. Extract Invoice num - "The invoice number is 56385612"
+6. Selenium - waits, ActionChains, 
+7. if __name__ == "__main__":
+8. super().__init__()
+9. Tuples - not necessary to enclose the tuple elements in parentheses. 
+   The tuple object can include elements separated by a comma without parentheses.
+
+10. Dictionary - 
+Dictionary is an unordered collection.
+The key should be unique and an immutable object. The dictionary class is dict.
+A number, string or tuple can be used as key but a dictionary with a list as a key is not valid, as the list is mutable.
+The value can be of any data type. One value can be assigned to more than one key.
+
+title_is
+title_contains
+presence_of_element_located
+visibility_of_element_located
+visibility_of
+presence_of_all_elements_located
+
+Inheritance vs Composition
+when one needs to use the class as it without any modification,
+the composition is recommended and when one needs to change the behavior of the method in another class,
+then inheritance is recommended.
+
+Python Iterator vs Generator:
+To create an Iterator we use iter() keyword and the values are retrived using the next()
+keyword.
+To create an Generator we use function() along with Yield Keyword
+
+Abstract base classes:
+container.__iter__() -> Return an iterator object
+iterator.__next__() -> Return the next item from the container.
+
+
+1. What are some of the challenges you faced when working on Selenium, Pytest
+
+Protected Members :
+Protected members are an indication / hint to the developers that it can be overridden only from the subclass (child class).
+
+Private members are an indication / hint to the developers that it can be overridden only from that Class.  uses __ (double underscore before member variable)
+Protected members are those members of the class that cannot be accessed outside the class but can be
+accessed from within the class and its subclasses. By prefixing the name of the member by a single underscore "_".
+
+Static and Class methods:
+Class methods take "cls" as the first argument and differentiated using the @classmethod decorator
+Static methods neither take instance (self) or cls as the first argument and differentiated using the
+@staticmethod decorator, it is just like a normal function but it is used inside the class for some logical connection.
+It is better to declare the regular methods as static methods, if you don't pass any instance argument.
+
+Property decorator :
+This property decorator allows us to use the class methods as just attributes
+emp1.fullname instead of emp1.fullname() where fullname is a method
+The use case is after creating the class, if some attribute needs to modified then instead of modifying the methods, we can 
+use property / setter decorator to update those attributes.
+
+1. Get the key of a minimum value from the following dictionary :
+sample_dict = {
+  'Physics': 82,
+  'Math': 65,
+  'history': 75
+}
+What is MonkeyPatching ??
+Consider a scenario where you are working with user directories. In the context of testing, you do not want your 
+test to depend on the running user. 
+monkeypatch can be used to patch functions dependent on the user to always return a specific value.
+
+Returning Functions from Functions in Python
+To return a function from a function in Python, you can define a new function inside the first function and then return it. 
+This technique is called nested functions or closures. 
+The returned function can then be assigned to a variable and called later.
+
+Difference between string operation count & Find
+Count returns the number of times a specified value occurs in a string and Find returns the index position of the specified value.
+
+Difference between string operation find & index
+Both returns the index position of the specified value but if the value is not found, find will return -1 and index will
+throw valueError()
+
+Extracting the value inside in a dictionary of dictionaries
+s={
+    "tickets": {
+        "failed": [
+            {
+                "id": "modifiedAtConsistency",
+                "title": "Cache - RDB timestamp consistency",
+                "details": {
+                    "cacheDate": 1696528587879,
+                    "dbDate": 1696528697025
+                },
+                "time": 0
+            }
+        ],
+    }
+}
+print(s["tickets"]["failed"][0]["title"])
+
+What is the ini file for pytest?
+Users can customize some pytest behavior using a configuration file called pytest. ini .
+This file is usually placed at the root of the repository and contains a number of configuration values that are applied 
+to all test runs for that project.
+
+@pytest.mark.usefixtures("fixture_name")
+The @pytest.mark.usefixtures("db_class") class-decorator makes 
+sure that the pytest fixture function db_class is called once per class.
+
+@pytest.fixture(autouse=True)
+Due to the autouse flag the "initdir" fixture function will be used for all methods of the class where it is defined. 
+This is a shortcut for using a @pytest.mark.usefixtures("initdir") marker on the class like in the previous example.
+
+
+
+
+
+

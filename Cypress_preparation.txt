@@ -1,0 +1,50 @@
+https://www.youtube.com/watch?v=wssjaHNlH8E
+
+what do you mean by hooks in Cypress ?
+Cypress hooks are generally used to set or define preconditions that we wish to execute either
+before/after every test or before/after a set of tests.
+some of the available hooks are afterEach(), after(), beforeEach() and before()
+
+In Pytest this is achieved using Fixtures for Setup and Teardown methods
+
+Define the components of Cypress ?
+1. Test Runner - UI interactive way to run tests
+2. App preview
+3. Test status
+4. Command Log
+5. URL preview
+6. Viewport sizing - Settings for adjusting view port
+
+.\node_module\.bin\cypress run --spec D:\Automation_repo\latest_cypress\testfile.cy.js
+
+Define Cypress run?
+Cypress run assists in executing the cypress tests in Headless browsers.
+It also assists in opening a New browser tab, along with that
+
+X-Path in Cypress ?
+Cypress doesn't support XPath. But, with the help of Cypress-Xpath plugin, we can use
+Xpath to interact with all the DOM elements
+npm install cypress-xpath
+
+verify the title of the page?
+cy.title().should('eq','OrangeHRM')
+
+How can you read values from the configuration file ?
+read the values of cypress.config file through Cypress.config()
+Ex: if we have managed to define the env in the config.json (cypress.config.js) file,
+such as:{"env":stage}, the same can be accessed in the script, such as:
+let timeout= Cypress.config('env')
+
+How do you maintain the test data in Cypress ?
+Generally, the fixture folder has the important data in the cypress project.
+It helps in getting the data input from all the external files
+cy.fixture(path of test data)
+
+
+To find out Cypress version:
+D:\Automation_repo\latest_cypress\e2e-tests\node_modules\.bin> .\cypress -v
+Cypress package version: 12.17.4
+Cypress binary version: 12.17.4
+Electron version: 21.0.0
+Bundled Node version:
+16.16.0

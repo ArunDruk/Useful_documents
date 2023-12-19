@@ -1,0 +1,116 @@
+Cypress Commands
+
+To run in headed mode:
+.\node_modules\.bin\cypress run --headed --spec .\cypress\e2e\Practice_pgms\navigation.cy.js
+
+To run in headless mode (By default it runs in headless when using cypress run):
+.\node_modules\.bin\cypress run --spec .\cypress\e2e\Practice_pgms\navigation.cy.js
+
+Dynamic wait:
+
+cy.intercept('POST', '/api/v2/availability/query').as('openpage');
+cy.wait('@openpage');
+
+cy.wait('@loadproducts').its('status').should('eq',200)
+
+cy.get("table:nth-of-type(1) a[href='/posts']")
+
+To select from Multiple elements:
+cy.get().eq(2)
+
+npm i -D cypress-wait-until
+
+For Drag and Drop:
+npm install --save-dev @4tw/cypress-drag-drop
+
+For Downloads:
+npm i -D cy-verify-downloads
+
+.then(callbackFn)
+.then(options, callbackFn)
+
+HTML table:
+HTML > div.widget-content > table > tbody > tr:nth-child(2) > td:nth-child(3)
+cy.get('table[name=BookTable] > tbody > tr td:nth-child(2)')
+
+
+cy.get().then(()=>{
+
+})
+https://www.youtube.com/watch?v=eMLVTX7AyNk  - Each
+Mouse operations using Cypress:
+https://www.youtube.com/watch?v=pr_TC6wXOiM
+
+cy.get().trigger("contextmenu")
+
+cy.get().trigger('mouseover')
+
+cy.get().should('be.hidden').invoke('show')
+cy.get().click()
+
+it.only()
+it.skip()
+
+
+Each - Iterate through an array like structure:  .each(callbackFn)
+cy.get('ul>li').each(() => {
+....
+})
+
+cy.get(".class_name:visible").should('have.length',4)
+cy.get(".parent_class").find(".child_class).should('have.length',4)
+
+cy.contains('Tables').click({force:true})
+cy.get('#simple-table-item').should('contain.text','Item prices')
+
+cy.get('#username').type('qavbox').invoke('val').then((myValue)=>{
+	cy.log(myvalue)
+})
+
+cy.get().clear().type('qavbox').should('have.value','qavbox')
+
+To get the text of the webElement:
+cy.get().invoke('text').then((myValue)=>{
+cy.log(myValue)
+})
+
+To check the property value
+cy.get('input[value=\'TestingBasics\']').invoke('prop','checked').then((myValue){
+cy.log(myValue)
+})
+
+cy.contains('Tutorials').invoke('prop','href').then((myValue)=>{
+cy.log(myValue)
+})
+cy.get().invoke("attr","aria-expanded").should("eq","false")
+https://www.youtube.com/watch?v=SInWGlUNxbY
+
+cy.get('#primary-menu [id*=menu-item]').each(item,index,list) =>{
+expect(list).to.have.length(6);
+})
+
+expect(txt).to.be.eq('Try it')
+
+let name = 'Arun'
+expect(name).to.be.equal('Arun')
+
+cy.get('[data-testid="greeting"]')
+  .invoke('text')
+  .should('match', /^Hello/)
+  
+  
+type('{shift+home}{backspace}')
+
+
+//   cy.getByTestId('filters-scoreFilters-searchResult-optionItem').click();
+      //   cy.getByTestId('filters-scoreFilters-searchOptionFilter-applyFilterBtn')
+      //     .invoke('prop', 'disabled')
+      //     .then((applyButton) => {
+      //       cy.log(applyButton);
+      //       if (applyButton) {
+      //         cy.getByTestId('global-filter--selected--sl_account_id--clear').click();
+      //         cy.getByTestId('filters-scoreFilters-searchOptionFilter-applyFilterBtn').click();
+      //         cy.getByTestId('filters-scoreFilters-customers').click();
+      //         cy.getByTestId('filters-scoreFilters-searchOptionFilter-searchInput').click().wait(2000).type('Buffalo Bills');
+      //       }
+      //     });
