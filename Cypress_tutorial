@@ -1,0 +1,162 @@
+
+
+Cypress Tutorial - https://youtu.be/69SFwgWHUig?feature=shared
+
+ // const reg = /\sresults\s/;
+
+Google Cypress Chrome extension.
+Cypress chrome recorder extension
+
+https://developer.chrome.com/docs/extensions/reference/devtools_recorder/
+
+
+D:\Automation_repo\latest_cypress\e2e-tests> .\node_modules\.bin\cypress run --spec D:\Automation_repo\latest_cypress\e2e-tests\cypress\e2e\SLC\console\footerContent.cy.js
+
+npm run cy:open
+
+npm install node-fetch
+
+npm -i cypress-grep
+npm install cypress-grep
+
+npm install cypress-real-events
+
+npm install cypress-testrail
+
+To run with Tags:
+npx cypress run --browser chrome --headed --env grepTags="@sanity"
+
+C:\>cd /d d:/Automation_repo/
+Naveen Automation Labs, By Raghav Automation step-by-step, by PAVAN SDET
+https://www.youtube.com/watch?v=8X7DygJ2woc
+
+https://on.cypress.io/custom-commands
+
+https://www.tutorialspoint.com/cypress/cypress_custom_commands.htm#
+
+pip install -r requirements.txt
+git clone https://github.com/supportlogic/qa-automation.git
+
+pytest -v -s -m "regression" test_collections
+
+pytest -v -s test_collections/test_ops_metrics.py::TestOpsMetrics::test_sla_chart_csv
+
+https://github.com/supportlogic/e2e-tests
+
+Note:
+ Cypress clears out the state of browser in between tests.
+ https://filiphric.com/cypress-basics-before-beforeeach-after-aftereach
+ 
+ By Raghav:
+ https://www.youtube.com/watch?v=YofvBZaTexE&list=PLhW3qG5bs-L9LTfxZ5LEBiM1WFfvX3dJo&index=13
+ 
+ By Naveen Automation Labs:
+ https://www.youtube.com/watch?v=y_L88Yzd4-Y&list=PLFGoYjJG_fqoxTBJAUYw_poyBh0DI78HV&index=11
+ 
+ By QA CAMP:
+ https://www.youtube.com/watch?v=IMx7Ng-T2mw&list=PLzDWIPKHyNmK9NX9_ng2IdrkEr8L4WwB0
+ 
+ By Codenbox Automation Lab:
+ https://www.youtube.com/watch?v=rlwlG264MGA&list=PLN9RL2PyZc184ita-eXbAMlErM0eVNUMj
+ 
+ By Automate Now:
+ https://www.youtube.com/watch?v=UaDvKYJdydY&list=PLjfhFHeUQDOi10BM3jD1e61CYdgccrZqB
+ 
+
+GIT
+Need SSH key for JumpCloud
+
+https://docs.cypress.io/guides/references/configuration#Configuration-File
+https://docs.cypress.io/guides/guides/environment-variables#Option-1-configuration-file
+
+Cypress
+To generate package.json
+npm init
+
+To install cypress and enter the cypress package in package.json
+npm install cypress --save-dev
+
+To Launch Cypress (To run test cases from TestRunner)
+  D:\CypressAutomation> .\node_modules\.bin\cypress open
+
+To open in another way:
+Add a line in package.json - under scripts - "cypress:open": "cypress open"
+ Run the command to open cypress - npm run cypress:open
+
+To run test cases from Terminal.
+ D:\CypressAutomation> .\node_modules\.bin\cypress run
+  D:\CypressAutomation> .\node_modules\.bin\cypress run --headed
+  cypress run --browser chrome
+  
+To run particular test case file.
+D:\CypressAutomation> .\node_modules\.bin\cypress run --spec .\cypress\e2e\1-getting-started\firsttest.cy.js
+
+By default Chrome will run in headed mode
+D:\CypressAutomation> .\node_modules\.bin\cypress run --browser chrome --spec .\cypress\e2e\1-getting-started\firsttest.cy.js
+
+Avoid Login page, status error code:
+cy.visit('https://app.hubspot.com/login',{failOnStatusCode: false})
+
+For Exceptions: add following in Support/index.js
+Cypress.on('uncaught:exception',(err, runnable)=> {
+	return false
+	})
+
+Get the element
+cy.get(selector) --> driver.find_element_by(selector)
+cy.get().type() -> type -> send_keys()
+cy.get('div.align-center.mb-lg h1:nth-of-type(2)')
+
+cy.contains('Contact Us').scrollIntoView()
+cy.wait(3000)
+
+Browser -> Back and Forward Navigation.
+cy.go('back') #cy.go(-1)
+cy.wait(200)
+cy.go('forward')
+
+Assertion: expect(true).to.equal(true)
+
+css Selector (w3 schools) (Chropath extension in chrome, Selector playground from TestRunner)
+.class
+#id
+[attribute=value]
+.class[attribute=value]
+
+For Auto suggestions cypress methods:
+/// <reference types="cypress" />
+
+Returns current page url.
+cy.url().should('include','url_text')
+
+cy.get("input[name=userName]").should('be.visible').should('be.enabled').type("enter text')
+cy.title().should('eq','mention_title_of_page')
+Radio Button
+cy.get("input[name=userName]").should('be.visible').should('not.be.checked').click()
+
+check box, check, verify checked and value.
+cy.get('#checkbox1').check().should('be.checked').and('have.value','Cricket')
+For Uncheck.
+cy.get('#checkbox1').uncheck().should('not.be.checked')
+For selecting multiple checkboxes in oneline
+cy.get('input[type=checkbox]').check(['Cricket','Hockey'])
+
+Drop down, having the tag select.
+cy.get('#Skills').select('Android').should('have.value','Android')  ### .should('contain','Button')  ## .should('have.class','query')
+
+Multi-Select options in drop down.
+cy.get('#msdd').click()
+cy.get('.ui-corner-all').contains('English').click()
+cy.get('.ui-corner-all').contains('Japanese').click()
+
+Searchable drop down, combo box
+cy.get('[role=combobox]').click()
+cy.get('.select2-search_field').type('Ind')
+
+To use Keyboard shortcuts.
+cy.get('.select2-search_field').type('{enter}')
+
+Suppose if the previous drop down is covering the below dropdown window, you can do force click
+cy.get('[role=combobox]').click({force: true})
+
+Completed 11 videos
